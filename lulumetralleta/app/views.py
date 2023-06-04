@@ -12,9 +12,3 @@ def home(request):
 
 def cita(request):
     return render(request, 'app/cita.html')
-
-def informacion(request):
-    return render(request, 'app/informacion.html')
-
-def medicos(request):
-    return render(request, 'app/medicos.html')
