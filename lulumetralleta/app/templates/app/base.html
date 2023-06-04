@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONITOREO DE PACIENTES</title>
+  {% block css %}
+  {% endblock %}
+  <link rel="stylesheet" href="{% static 'app/css/nav.css' %}">
+</head>
+
+<!-- ENCABEZADO -->
+<body>
+  <header>
+    <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'img/clinica.png' %}" alt="logo">
+        <h2 class="nombre-empresa">CENTRO MÉDICO DOS ÁLAMOS</h2>
+    </a>
+    <nav>
+        <a href="#" class="nav-link">QUIENES SOMOS</a>
+        <a href="#" class="nav-link">ÁREA DE RECLAMOS</a>
+        <a href="#" class="nav-link">ATENCIÓN AL CLIENTE</a>
+
+        <a href="" class="boton-enlace">
+            <span class="contenido-enlace">
+                <img src="{% static 'img/perfil.png' %}" class="imagen-enlace">
+                <span class="texto-enlace">MI PERFIL</span>
+            </span>
+        </a>
+    </nav>
+</header>
+<!-- ENCABEZADO -->
+
+  {% block contenido %}
+
+  {% endblock %}
+
+  {% block js %}
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/nav.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/tabla.css' %}">
+{% endblock %}
+{% block contenido %}
+
+<div class="table-container">
+    <div class="table-wrapper">
+        <div class="table-responsive">
+            <br>
+            <h1>Historial de Atenciones</h1>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre Paciente</th>
+                        <th>Fecha de consulta</th>
+                        <th>Hora de Consulta</th>
+                        <th>Historial Clínico</th>
+                        {% comment %} <th>Historial clinico</th> {% endcomment %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in cita %}
+                    <tr>
+                        <td>{{ c.paciente | capfirst }} {{ c.paciente.apellidos | capfirst }}</td>
+                        <td>{{ c.fecha }}</td>
+                        <td>{{ c.hora }}</td>
+                        <td><button type="button" class="btn" style="width: 60%; margin-left: 60px;">
+                                <a href="" style="font-size: 18px;">Acceder a Historial
+                                    Clínico</a>
+                            </button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+
+
+{% endblock %}

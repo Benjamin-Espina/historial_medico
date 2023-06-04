@@ -1,0 +1,31 @@
+.center-table {
+    margin: 0 auto;
+}
+
+.title-table {
+    background-color: #CCE8F8;
+}
+
+table {
+    border-collapse: collapse;
+    /* Combina los bordes de las celdas adyacentes */
+    width: 80%;
+    /* Ancho de la tabla */
+}
+
+th,
+td {
+    border: 2px solid black;
+    /* Borde sólido de 1 píxel */
+    padding: 5px;
+    /* Espacio interno de las celdas */
+}
+
+h1 {
+    text-align: center;
+}
+
+button{
+    background-color: #CCE8F8;
+}
+
